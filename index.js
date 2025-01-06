@@ -9,7 +9,6 @@ app.get('/', (req, res) => {
   });
 });
 
-// Route for adding two numbers
 app.get('/add/:a/:b', (req, res) => {
   const { a, b } = req.params;
   const sum = add(a, b);
