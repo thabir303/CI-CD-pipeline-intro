@@ -25,7 +25,10 @@ function add(a, b) {
   return a + b;
 }
 
-app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000');
-});
+if (require.main === module) {
+  app.listen(3000, () => {
+    console.log('Server is running on http://localhost:3000');
+  });
+}
+
 module.exports = { add };
